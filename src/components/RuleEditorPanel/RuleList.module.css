@@ -1,0 +1,28 @@
+.ruleList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addRuleButton {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a73e8;
+  background: transparent;
+  border: 1px dashed #1a73e8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.addRuleButton:hover {
+  background-color: rgba(26, 115, 232, 0.08);
+}
+
+.addRuleButton:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}

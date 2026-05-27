@@ -1,0 +1,17 @@
+.container {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.highlighted {
+  border: 2px solid #1a73e8;
+}
+
+.header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}

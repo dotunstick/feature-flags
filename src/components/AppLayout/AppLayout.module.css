@@ -1,0 +1,86 @@
+.layout {
+  /* Colour palette */
+  --color-bg: #1a1a2e;
+  --color-surface: #16213e;
+  --color-border: #0f3460;
+  --color-text: #e0e0e0;
+  --color-text-muted: #9e9e9e;
+  --color-accent: #e94560;
+
+  /* Typography */
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-size-sm: 12px;
+  --font-size-lg: 16px;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+
+  /* Panel widths */
+  --flag-list-width: 260px;
+  --eval-panel-width: 320px;
+  --eval-panel-collapsed-width: 40px;
+
+  /* --------------------------------------------------------
+     Three-column grid layout
+     Column 1: FlagListPanel  — fixed width
+     Column 2: RuleEditorPanel — takes all remaining space
+     Column 3: EvalPanel       — fixed width, collapsible
+     -------------------------------------------------------- */
+  display: grid;
+  grid-template-columns:
+    var(--flag-list-width)
+    1fr
+    var(--eval-panel-width);
+  grid-template-rows: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+/* When the EvalPanel is collapsed, shrink the third column to the
+   minimal width needed for the collapse toggle button only.
+   The RuleEditorPanel (column 2 = 1fr) automatically expands to
+   fill the vacated space. */
+.layout.evalCollapsed {
+  grid-template-columns:
+    var(--flag-list-width)
+    1fr
+    var(--eval-panel-collapsed-width);
+}
+
+/* ============================================================
+   Column containers
+   ============================================================ */
+
+.flagListColumn {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  min-width: 0;
+}
+
+.ruleEditorColumn {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  /* Ensure the rule editor never shrinks below 50% of the total viewport */
+  min-width: 50vw;
+}
+
+.evalColumn {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  /* Prevent content overflow when collapsed */
+  min-width: 0;
+}

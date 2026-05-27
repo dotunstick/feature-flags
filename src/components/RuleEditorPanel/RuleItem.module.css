@@ -1,0 +1,139 @@
+.ruleItem {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+.ruleItemHighlighted {
+  border: 2px solid #1a73e8;
+  background-color: #e8f0fe;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.reorderControls {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: 8px;
+}
+
+.reorderButton {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 10px;
+  cursor: pointer;
+  color: #555;
+  line-height: 1;
+}
+
+.reorderButton:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+.reorderButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.ruleTitle {
+  font-weight: 600;
+  font-size: 14px;
+  flex: 1;
+}
+
+.removeRuleButton {
+  background: none;
+  border: 1px solid #d93025;
+  color: #d93025;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.removeRuleButton:hover {
+  background-color: #fce8e6;
+}
+
+.conditionList {
+  margin-bottom: 8px;
+}
+
+.conditionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.conditionInput {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 120px;
+}
+
+.conditionSeparator {
+  font-size: 13px;
+  color: #666;
+}
+
+.removeConditionButton {
+  background: none;
+  border: none;
+  color: #d93025;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.removeConditionButton:hover {
+  background-color: #fce8e6;
+}
+
+.addConditionButton {
+  background: none;
+  border: 1px dashed #1a73e8;
+  color: #1a73e8;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.addConditionButton:hover {
+  background-color: #e8f0fe;
+}
+
+.variantSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.variantLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.variantInput {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 150px;
+}

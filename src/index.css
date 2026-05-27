@@ -1,0 +1,62 @@
+/* -------------------------------------------------------------------------
+   Global reset and base styles
+   Removes Vite defaults; sets up box-sizing, typography, and colour tokens
+   that complement the CSS custom properties defined in AppLayout.module.css.
+   ------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Typography */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Colour scheme */
+  color-scheme: light;
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  min-width: 320px;
+}
+
+/* Remove default list styling */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default button styling */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* Remove default anchor styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}

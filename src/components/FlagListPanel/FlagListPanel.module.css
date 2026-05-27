@@ -1,0 +1,37 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 2);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.01em;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0;
+  padding: calc(var(--spacing-unit) / 2) 0;
+  list-style: none;
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+  border-top: 1px solid var(--color-border);
+}

@@ -1,0 +1,34 @@
+.toggle {
+  /* Reset button defaults */
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  /* Focus ring */
+  outline: none;
+  border-radius: 12px;
+}
+
+.track {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toggle[aria-checked="true"] .track {
+  background-color: var(--color-accent, #e94560);
+  border-color: var(--color-accent, #e94560);
+}
+
